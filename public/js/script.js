@@ -1,0 +1,37 @@
+// window.onload = function(){
+//     alert('script.js file is connected');
+// }
+$(document).ready(function(){
+    $('.upload-btn').on('click',function(){
+        $('#upload-input').click();
+    });
+    $('#upload-input').on('change',function(){
+        var uploadInput= $('#upload-input');
+        if(uploadInput.val()!=''){
+            var formData= new FormData();
+            formData.append('upload',uploadInput[0].files[0]);
+
+            $.ajax({
+                url:'/uploadFile',
+                type:'POST',
+                data: formData,
+                processData: false,
+                contentType:false,
+                success: function(){
+                    uploadInput.val('')
+                }
+            })
+        }
+    })
+})
+
+
+
+
+
+// make chatroom autoscroll
+$(document).ready(function(){
+    $('#messages').animate({scrollTop:100000},800);
+    $('#kp-1').animate({scrollTop:100000},800);
+    $('#comment_form').animate({scrollTop:100000},800);
+});

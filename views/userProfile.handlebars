@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+      <div class="col-sm-5">
+           <div class="card" style="width: 18rem;">
+  <img src="{{oneUser.image}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    
+    <p>{{oneUser.gender}}</p>
+    <a href="/startChat/{{oneUser._id}}" class="btn btn-primary">
+    <i class="fa fa-commenting"></i>
+    </a>
+    
+    {{#if smile}}
+    <a href="/deleteSmile/{{oneUser._id}}" class="btn btn-danger">
+    <i class="fa fa-smile-o"></i>
+    </a>
+    {{else}}
+    <a href="/sendSmile/{{oneUser._id}}" class="btn btn-outline-danger">
+    <i class="fa fa-smile-o"></i>
+    </a>
+    {{/if}}
+
+  </div>
+</div>
+      </div>
+      <div class="col-sm-5">
+        <h2 class="center">Profile</h2> 
+        <h5> <i class="fa fa-user"></i>{{oneUser.fullname}}</h5> 
+        <h5><i class="fa fa-mars"></i>{{oneUser.gender}}</h5>
+        <h5><i class="fa fa-address-book"></i>{{oneUser.about}}</h5>
+        <br>
+        {{#if oneUser.online}}
+        <i class="fa fa-circle green">Online</i>
+        {{else}}
+        <i class="fa fa-circle red">Offline</i>
+        {{/if}}
+      </div>
+  </div>
+</div>

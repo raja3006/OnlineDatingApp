@@ -1,0 +1,40 @@
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+.fa-edit{
+    cursor: pointer;
+    
+    margin-right: 10px;
+}
+a:visited{
+    
+    margin-right: 10px;
+}
+.chatroom-user{
+    width: 64px;
+    height: 64px;
+}
+#message{
+    height: 300px;
+    overflow-y: scroll;
+}
+.right{
+    float: right;
+}
+.singles-icon{
+    margin-top: 50px;
+}
+.post-icons{
+    margin-right: 10px;
+
+}
+.black{
+    color: black;
+}
+

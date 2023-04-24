@@ -1,0 +1,175 @@
+
+{{#if user}}
+<p>You are logged in..</p>
+{{else}}
+<!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <img class="img-fluid" src="img/snuggle 1.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h3>Warmest place to find love in all forms</h3>
+                        <a class="btn-solid-lg page-scroll" href="/auth/google">Login With Google</a>
+                        <a class="btn-solid-lg page-scroll" href="/auth/facebook">Login With facebook</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+
+        <div class="container">
+          <p class="center">or</p>
+
+        <form action="/login" method="POST">
+        {{#each success}}
+        <p class="green">{{text}}</p>
+        {{/each}}
+        {{#each errors}}
+        <p class="red">{{text}}</p>
+        {{/each}}
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" class="form-control" width="50%">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <a href="/newAccount">Need Account?</a>
+        </div>
+        
+        <div class="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <!-- Card -->
+                        <div class="card">
+                            <div class="card-image">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Network better</h5>
+                                <div class="card-text">If you’re new to a city or looking to expand your social circle, Snuggle has got your back because we all seek a little company in places where there's no recognizable face around. </div>
+                            </div>
+                        </div>
+                        <!-- end of card -->
+
+                        <!-- Card -->
+                        <div class="card">
+                            <div class="card-image">
+                                <i class="fas fa-user-check"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Recommendations based on user profiles</h5>
+                                <div class="card-text">Finding the one can be really hard, but Snuggle simplifies this process for you. With our algoriths to compare profiles, we filter people for you.</div>
+                            </div>
+                        </div>
+                        <!-- end of card -->
+
+                        <!-- Card -->
+                        <div class="card">
+                            <div class="card-image">
+                                <i class="fas fa-lock-open"></i>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">A safe space to explore</h5>
+                                <div class="card-text">We beleive in creating a space where people are comfortable. With our last update, we have added location tracking and a SOS feature during a physical date.</div>
+                            </div>
+                        </div>
+                        <!-- end of card -->
+
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of services -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+    <!-- Details 1 -->
+    <div id="details" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xl-5">
+                    <div class="text-container">
+                        <h2>LOVE IS LOVE</h2>
+                        <hr class="hr-heading">
+                        <p>In love gender doesn’t matter; all that matters is that two people love each other. Nothing should stand in their way if they have love in their hearts. 
+                            <br> <br>
+                            Who is allowing us to add labels? <br>
+                            When the only rule to love is that it knows no bounds. All that we know is that when love is true, you hold on to it.</p>
+            
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6 col-xl-7">
+                    <div class="image-container">
+                        <img class="img-fluid" src="/img/details-1.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of details 1 -->
+
+
+    <!-- Details 2 -->
+    <div class="basic-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="image-area">
+                    <div class="image-container">
+                        <img class="img-fluid" src="/img/details-2.jpg" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of image-area -->
+                <div class="text-area">
+                    <div class="text-container">
+                        <h2>Travel with strangers</h2>
+                        <hr class="hr-heading">
+                        <p>The travel impulse is mental and physical curiosity. Find people nearby and join them build bond and explore.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of text-area -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container-fluid -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of details 2 -->
+	
+
+    <!-- Details 3 -->
+    <div class="basic-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xl-5">
+                    <div class="text-container">
+                        <h2>AGE IS JUST A NUMBER</h2>
+                        <hr class="hr-heading">
+                        <p>Age is an issue of mind over matter. If you don't mind, it doesn't matter.All ages have a right to love.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6 col-xl-7">
+                    <div class="image-container">
+                        <img class="img-fluid" src="/img/details-3.png" alt="alternative">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-3 -->
+    <!-- end of details 3 -->
+
+    <!-- Mission -->
+    <div class="basic-4">
+        <div class="container">
+            <div class="row">
+                <div class="text-container">
+                    <h4>Healthy relationships are central to living a positive, productive life. SNUGGLE is a social network that allows you to feel empowered while you make those connections, whether you’re dating, looking for friends, or growing your professional network. One first move on SNUGGLE could change your life.</h4>
+                </div> <!-- end of text-container -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-4 -->
+    <!-- end of mission -->
+{{/if}}

@@ -1,0 +1,64 @@
+<div class="container-fluid">
+
+    <div class="container">
+
+        <h3 class="center">
+            <a href="/userProfile/{{chat.sender._id}}">
+            <img src="{{chat.sender.image}}" width="64px"  class="chatroom-users rounded-circle">
+            <p>{{chat.sender.fullname}}</p>
+            </a>
+
+            <a href="/userProfile/{{chat.receiver._id}}">
+            <img src="{{chat.receiver.image}}"  width="64px"  class="chatroom-users rounded-circle">
+            <p>{{chat.receiver.fullname}}</p>
+            </a>
+            
+        </h3>
+        
+        <div id="message">
+          {{#each chat}}
+        {{#each chats}}
+        {{#if senderMessage}}
+               <div class="media">
+                    <a href="/userProfile/{{senderName._id}}">
+                        <img class="mr-3 chatroom-users rounded-circle" src="{{senderName.image}}" width="64px" alt="Generic placeholder image" >
+                    </a>
+                    <div class="media-body">
+                        <h5 class="mt-0">{{senderMessage}}</h5>
+                        <small>{{getLastMoment date 'hour'}}</small>
+                    </div>
+                </div>
+        {{/if}}
+        {{/each}}
+        {{/each}}
+
+
+        <hr>
+
+         {{#each chat}}
+        {{#each chats}}
+        {{#if receiverMessage}}
+               <div class="media">
+                   <a href="/userProfile/{{receiverName._id}}">
+                        <img class="mr-3 chatroom-users rounded-circle" src="{{receiverName.image}}" width="64px" alt="Generic placeholder image" >
+                   </a>
+                   
+                    <div class="media-body">
+                        <h5 class="mt-0">{{receiverMessage}}</h5>
+                        <small>{{getLastMoment date 'hour'}}</small>
+                    </div>
+                </div>
+        {{/if}}
+        {{/each}}
+        {{/each}}
+
+        </div>
+
+        <form action="/chat/{{chat._id}}" method="POST">
+        <input type="text" class="form-control" name="chat" placeholder="Type message..">
+        <br>
+        <button class="btn btn-primary" type="submit"> Send</button>
+        </form>
+ 
+    </div>
+</div>
